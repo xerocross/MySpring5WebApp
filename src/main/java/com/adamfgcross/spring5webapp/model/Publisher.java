@@ -19,6 +19,7 @@ public class Publisher {
     private String zipCode;
 
     @OneToMany
+    @JoinColumn(name = "publisher_id")
     private Set<Book> books = new HashSet<>();
 
     public Publisher() {
